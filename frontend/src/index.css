@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@import url('https://googleapis.com');
+
+@theme {
+  --color-lemon-green: #495E57;
+  --color-lemon-yellow: #F4CE14;
+  --color-lemon-light: #EE9972;
+  --color-lemon-beige: #FBDABB;
+  --color-lemon-dark: #333333;
+  --color-lemon-gray: #EDEFEE;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Markazi Text', serif;
+}
+
+@utility base-body {
+  background-color: white;
+  color: var(--color-lemon-dark);
+  font-family: var(--font-sans);
+}
+
+@utility btn-primary {
+  @apply bg-lemon-yellow text-lemon-dark font-semibold px-6 py-3 rounded-lg
+         hover:bg-yellow-300 transition-colors duration-200 focus:outline-none
+         focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2;
+}
+
+@utility btn-secondary {
+  @apply bg-lemon-green text-white font-semibold px-6 py-3 rounded-lg
+         hover:bg-green-700 transition-colors duration-200;
+}
+
+@utility input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg
+         focus:outline-none focus:ring-2 focus:ring-lemon-green
+         bg-white text-lemon-dark placeholder-gray-400;
+}
+
+@utility card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden
+         hover:shadow-lg transition-shadow duration-200;
+}
